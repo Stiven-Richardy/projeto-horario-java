@@ -14,9 +14,9 @@ public class Hora {
     
     //Métodos construtores
     public Hora() {
-        this.hora = 0;
-        this.minuto = 0;
-        this.segundo = 0;
+        this.setHora();
+        this.setMinuto();
+        this.setSegundo();
     }
 
     public Hora(int hora, int minuto, int segundo) {
@@ -70,7 +70,7 @@ public class Hora {
 
     public String getHora2() {
         return String.format("%02d:%02d:%02d %s", 
-            (this.hora % 12 == 0) ? 12 : this.hora % 12, this.minuto, this.segundo, 
+            (this.hora > 12) ? (this.hora - 12) : this.hora, this.minuto, this.segundo, 
             (this.hora < 12) ? "AM" : "PM");
     }
 

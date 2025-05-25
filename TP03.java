@@ -78,10 +78,16 @@ public class TP03 {
 
 		// Criação do objeto Hora
 		Hora hora = new Hora(h, m, s);
+		
+		// Instancia por construtor vazio
+		Hora hora0 = new Hora();
 
 		// Exibição dos dados
 		System.out.println(hora.getHora1());
 		System.out.println(hora.getHora2());
 		System.out.println(hora.getSegundos() + " segundos.");
+		System.out.println("Hora vazio: " + hora0.getHora1());
+		System.out.println("Hora vazio: " + hora0.getHora2());
+		System.out.println("Segundos: " + hora0.getSegundos());
 	}
 }
