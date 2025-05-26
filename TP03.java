@@ -18,12 +18,12 @@ public class TP03 {
 				System.out.print("Digite a hora (0-23): ");
 				hora = ler.nextInt();
 				if (hora < 0 || hora > 23) {
-					System.out.println("Hora inválida. Deve estar entre 0 e 23. Tente novamente:");
+					System.out.println("Hora invalida. Deve estar entre 0 e 23.");
 				} else {
 					return hora;
 				}
 			} catch (InputMismatchException error) {
-				System.out.println("Digite um número inteiro válido.");
+				System.out.println("Digite um numero inteiro valido.");
 				ler.next();
 			}
 		}
@@ -37,12 +37,12 @@ public class TP03 {
 				System.out.print("Digite o minuto (0-59): ");
 				minuto = ler.nextInt();
 				if (minuto < 0 || minuto > 59) {
-					System.out.println("Hora inválida. Deve estar entre 0 e 59. Tente novamente:");
+					System.out.println("Hora invalida. Deve estar entre 0 e 59.");
 				} else {
 					return minuto;
 				}
 			} catch (InputMismatchException error) {
-				System.out.println("Digite um número inteiro válido.");
+				System.out.println("Digite um numero inteiro valido.");
 				ler.next();
 			}
 		}
@@ -56,12 +56,12 @@ public class TP03 {
 				System.out.print("Digite o segundo (0-59): ");
 				segundo = ler.nextInt();
 				if (segundo < 0 || segundo > 59) {
-					System.out.println("Hora inválida. Deve estar entre 0 e 59. Tente novamente:");
+					System.out.println("Hora invalida. Deve estar entre 0 e 59.");
 				} else {
 					return segundo;
 				}
 			} catch (InputMismatchException error) {
-				System.out.println("Digite um número inteiro válido.");
+				System.out.println("Digite um numero inteiro valido.");
 				ler.next();
 			}
 		}
@@ -82,12 +82,54 @@ public class TP03 {
 		// Instancia por construtor vazio
 		Hora hora0 = new Hora();
 
-		// Exibição dos dados
-		System.out.println(hora.getHora1());
-		System.out.println(hora.getHora2());
-		System.out.println(hora.getSegundos() + " segundos.");
+		// Exibição da hora1
+		System.out.println("Relogio (Formato 24h):");
+		System.out.println("       .--.");
+		System.out.println("  .-._;.--.;_.-.");
+		System.out.println(" (_.'_..--.._'._)");
+		System.out.println("  /.' .    . '.\\");
+		System.out.println(" // .        . \\\\");
+		System.out.println("|; .          . |;");
+		System.out.println("||   " + hora.getHora1() + "   ||");
+		System.out.println("|; .          . |;");
+		System.out.println(" \\\\ .        . //");		
+		System.out.println("  \\'._'    '_.'/");
+		System.out.println("   '-._'--'_.-'");
+		System.out.println("       `\"\"` ");
+
+		// Exibição da hora2
+		System.out.println("Relogio (Formato AM/PM):");
+		System.out.println("       .--.");
+		System.out.println("  .-._;.--.;_.-.");
+		System.out.println(" (_.'_..--.._'._)");
+		System.out.println("  /.' .    . '.\\");
+		System.out.println(" // .        . \\\\");
+		System.out.println("|; .          . |;");
+		System.out.println("||  " + hora.getHora2() + "  ||");
+		System.out.println("|; .          . |;");
+		System.out.println(" \\\\ .        . //");		
+		System.out.println("  \\'._'    '_.'/");
+		System.out.println("   '-._'--'_.-'");
+		System.out.println("       `\"\"` ");
+
+		// Exibição dos segundos
+		System.out.println("Relogio dos Segundos:");
+		System.out.println("       .--.");
+		System.out.println("  .-._;.--.;_.-.");
+		System.out.println(" (_.'_..--.._'._)");
+		System.out.println("  /.' .    . '.\\");
+		System.out.println(" // .        . \\\\");
+		System.out.println("|; .          . |;");
+		System.out.println("||  " + hora.getSegundos() + " seg.  ||");
+		System.out.println("|; .          . |;");
+		System.out.println(" \\\\ .        . //");		
+		System.out.println("  \\'._'    '_.'/");
+		System.out.println("   '-._'--'_.-'");
+		System.out.println("       `\"\"` ");
+
+		// Exibição do objeto vazio
 		System.out.println("Hora vazio: " + hora0.getHora1());
 		System.out.println("Hora vazio: " + hora0.getHora2());
-		System.out.println("Segundos: " + hora0.getSegundos());
+		System.out.println("Segundos vazio: " + hora0.getSegundos() + " seg.");
 	}
 }

@@ -69,7 +69,7 @@ public class Hora {
     }
 
     public String getHora2() {
-        return String.format("%02d:%02d:%02d %s", 
+        return String.format("%02d:%02d:%02d%s", 
             (this.hora > 12) ? (this.hora - 12) : this.hora, this.minuto, this.segundo, 
             (this.hora < 12) ? "AM" : "PM");
     }
